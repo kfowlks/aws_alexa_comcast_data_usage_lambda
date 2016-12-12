@@ -4,9 +4,9 @@
 
 ```bash
 pip install requests -t "path to this project"
+```
 
 **Note:** This code uses ask-alexa-pykit release python_lambda_0.5_release 
-```
 
 ```bash
 git clone https://github.com/anjishnu/ask-alexa-pykit.git
