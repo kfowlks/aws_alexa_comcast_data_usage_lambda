@@ -1,14 +1,30 @@
-from __future__ import print_function
 # -*- coding: utf-8 -*-
+from __future__ import print_function
+
 """Comcast Internet Usage Alexa Skill
 Author: Kevin Fowlks
 Date:   12/05/2016
 
+TODO: Add code to cache JSON response from Comcast
+
 The comcast python code was stolen from https://github.com/lachesis/comcast
 
+pip install requests -t <path to this project>
+
+Note: This code uses ask-alexa-pykit release python_lambda_0.5_release 
+
+git checkout python_lambda_0.5_release 
+
+You'll need to set the below Environment variables in your AWS Lambda console
+
+    COMCAST_USERNAME
+    COMCAST_PASSWORD
+
+    See below for more detailed usage instructions
+        https://github.com/kfowlks/aws_alexa_comcast_data_usage_lambda/blob/master/README.md
 """
 from ask import alexa
-#from dateutil.parser import parse
+
 from datetime import datetime
 
 import logging
@@ -38,64 +54,49 @@ logging.basicConfig(level=logging.DEBUG)
 logging.getLogger('requests').setLevel(logging.ERROR)
 
 def lambda_handler(request_obj, context=None):
-    '''
-    This is the main function to enter to enter into this code.
-    If you are hosting this code on AWS Lambda, this should be the entry point.
-    Otherwise your server can hit this code as long as you remember that the
-    input 'request_obj' is JSON request converted into a nested python object.
-    '''
+
+    myUsageMonths = {}
+
+    jsonStr = getUsage()
+
+    if jsonStr == None:
+        card = alexa.create_card(title="GetInternetUsage activated", subtitle=None,
+                                content="asked alexa to get internet usage")
+        return alexa.create_response("Sorry unable to retrieve comcast account information", end_session=True, card_obj=card)
+
+    jsonObj = json.loads(jsonStr)
+
+    usageMonths = jsonObj['usageMonths']
+
+    for usageMonth in usageMonths:
+        monthName = calendar.month_name[int(usageMonth['startDate'][:2])]
+        myUsageMonths[monthName] = MyUsage( monthName, usageMonth['unitOfMeasure'], usageMonth['homeUsage'], usageMonth['allowableUsage'])
     
-
-    metadata  = request.metadata
-
-    if 'usageMonths' not in metadata:
-        jsonStr = getUsage()
-
-        if jsonStr == None:
-            card = alexa.create_card(title="GetInternetUsage activated", subtitle=None,
-                                    content="asked alexa to get internet usage")
-            return alexa.create_response("Sorry unable to retrieve comcast account information", end_session=True, card_obj=card)
-
-        jsonObj = json.loads(jsonStr)
-
-        usageMonths = jsonObj['usageMonths']
-
-        metadata = {'usageMonths' : usageMonths } # add your own metadata to the request using key value pairs
+    metadata = {'usageMonths' : myUsageMonths } 
 
     return alexa.route_request(request_obj, metadata)
 
-
 @alexa.default_handler()
 def default_handler(request):
-    """ The default handler gets invoked if no handler is set for a request """
     return alexa.create_response(message="Just ask").with_card('What is my current internet usage')
-
 
 @alexa.request_handler("LaunchRequest")
 def launch_request_handler(request):
     return alexa.create_response(message="Hello Welcome to Internet Usage!")
 
-
 @alexa.request_handler("SessionEndedRequest")
 def session_ended_request_handler(request):
     return alexa.create_response(message="Goodbye!")
 
-
 @alexa.intent_handler('GetInternetUsage')
 def get_internet_usage_intent_handler(request):
-    
-    myUsageMonths = {}
 
-    usageMonths = request.metadata['usageMonths']
-    
-    for usageMonth in usageMonths:
-        monthName = calendar.month_name[int(usageMonth['startDate'][:2])]
-        myUsageMonths[monthName] = MyUsage( monthName, usageMonth['unitOfMeasure'], usageMonth['homeUsage'], usageMonth['allowableUsage'])
-    
+    myUsageMonths = request.metadata['usageMonths']
+       
     requestMonth = request.slots["Date"]
 
     if requestMonth == None:
-        currentDT = datetime.datetime.now()  # If users request does not have a date lets default to the current date 
+        currentDT = datetime.datetime.now()               # If users request does not have a date lets default to the current date 
         requestUserMonthByName = currentDT.strftime("%B") # Get Month by name e.g.    
     else:    
         requestUserMonthByName = calendar.month_name[int(requestMonth[5] + requestMonth[6])]
