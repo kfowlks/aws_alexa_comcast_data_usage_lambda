@@ -5,14 +5,218 @@ Author: Kevin Fowlks
 Date:   12/05/2016
 
 The comcast python code was stolen from https://github.com/lachesis/comcast
+
+
+{
+   "courtesyUsed":0,
+   "courtesyRemaining":2,
+   "courtesyAllowed":2,
+   "inPaidOverage":false,
+   "usageMonths":[
+      {
+         "policyName":"Xfinity Data Plan",
+         "startDate":"06/01/2016",
+         "endDate":"06/30/2016",
+         "homeUsage":1759.0,
+         "allowableUsage":250,
+         "unitOfMeasure":"GB",
+         "devices":[
+
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":0.0,
+         "additionalUnitsPerBlock":null,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"suspended"
+      },
+      {
+         "policyName":"Xfinity Data Plan",
+         "startDate":"07/01/2016",
+         "endDate":"07/31/2016",
+         "homeUsage":2037.0,
+         "allowableUsage":250,
+         "unitOfMeasure":"GB",
+         "devices":[
+
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":0.0,
+         "additionalUnitsPerBlock":null,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"suspended"
+      },
+      {
+         "policyName":"Xfinity Data Plan",
+         "startDate":"08/01/2016",
+         "endDate":"08/31/2016",
+         "homeUsage":1464.0,
+         "allowableUsage":250,
+         "unitOfMeasure":"GB",
+         "devices":[
+
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":0.0,
+         "additionalUnitsPerBlock":null,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"suspended"
+      },
+      {
+         "policyName":"Xfinity Data Plan",
+         "startDate":"09/01/2016",
+         "endDate":"09/30/2016",
+         "homeUsage":704.0,
+         "allowableUsage":250,
+         "unitOfMeasure":"GB",
+         "devices":[
+
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":0.0,
+         "additionalUnitsPerBlock":null,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"suspended"
+      },
+      {
+         "policyName":"Xfinity Data Plan",
+         "startDate":"10/01/2016",
+         "endDate":"10/31/2016",
+         "homeUsage":768.0,
+         "allowableUsage":250,
+         "unitOfMeasure":"GB",
+         "devices":[
+
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":0.0,
+         "additionalUnitsPerBlock":null,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"suspended"
+      },
+      {
+         "policyName":"1 Terabyte Data Plan",
+         "startDate":"11/01/2016",
+         "endDate":"11/30/2016",
+         "homeUsage":866.0,
+         "allowableUsage":1024.0,
+         "unitOfMeasure":"GB",
+         "devices":[
+            {
+               "id":"78:96:84:FA:2F:F0",
+               "usage":866.0
+            }
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":10.0,
+         "additionalUnitsPerBlock":50.0,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"limited"
+      },
+      {
+         "policyName":"1 Terabyte Data Plan",
+         "startDate":"12/01/2016",
+         "endDate":"12/31/2016",
+         "homeUsage":268.0,
+         "allowableUsage":1024.0,
+         "unitOfMeasure":"GB",
+         "devices":[
+            {
+               "id":"78:96:84:FA:2F:F0",
+               "usage":268.0
+            }
+         ],
+         "additionalBlocksUsed":0.0,
+         "additionalCostPerBlock":10.0,
+         "additionalUnitsPerBlock":50.0,
+         "additionalIncluded":0.0,
+         "additionalUsed":0.0,
+         "additionalPercentUsed":0.0,
+         "additionalRemaining":0.0,
+         "billableOverage":0.0,
+         "overageCharges":0.0,
+         "overageUsed":0.0,
+         "currentCreditAmount":0,
+         "maxCreditAmount":0,
+         "policy":"limited"
+      }
+   ]
+}
+
+
 """
 from ask import alexa
+#from dateutil.parser import parse
+from datetime import datetime
 
 import logging
 import os
 import re
 import requests
 import datetime
+import json
+import calendar
+import time
+
+class MyUsage(object):
+    monthLongName = ""
+    unitOfMeasure = ""
+    homeUsage=0
+    allowableUsage=1000
+
+    # The class "constructor" - It's actually an initializer 
+    def __init__(self, monthLongName, unitOfMeasure, homeUsage, allowableUsage):
+        self.monthLongName = monthLongName
+        self.unitOfMeasure = unitOfMeasure
+        self.homeUsage = homeUsage
+        self.allowableUsage = allowableUsage
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
@@ -56,34 +260,47 @@ def session_ended_request_handler(request):
 
 @alexa.intent_handler('GetInternetUsage')
 def get_internet_usage_intent_handler(request):
+
+
+    jsonStr = getUsage()
+    jsonObj = json.loads(jsonStr)
+    usageMonths = jsonObj['usageMonths']
+
+    myUsageMonths = {}
     
-    currentDT = datetime.datetime.now()
-    
-    requestMonth = currentDT.strftime("%B") # Get Month by name e.g.
+    requestUserMonthByName = ""
+    requestMonth = request.slots["Date"]
 
-    #requestMonth = request.slots["XYZ"]
-    requestMonth = ""
-    for s in request.slots:
-        requestMonth = requestMonth + s
+    if requestMonth == None:
+        currentDT = datetime.datetime.now()    
+        requestUserMonthByName = currentDT.strftime("%B") # Get Month by name e.g.    
+    else:    
+        requestUserMonthByName = calendar.month_name[int(requestMonth[5] + requestMonth[6])]
 
-    # # Get variables like userId, slots, intent name etc from the 'Request' object
+    for usageMonth in usageMonths:
+        monthName = calendar.month_name[int(usageMonth['startDate'][:2])]
+        myUsageMonths[monthName] = MyUsage( monthName, usageMonth['unitOfMeasure'], usageMonth['homeUsage'], usageMonth['allowableUsage'])
 
-    usageAmt   = 1
-    usageUnits = "Gigs"
-    requestMonth = "April"
-    
-    #if requestMonth == None:
-        
+    if requestUserMonthByName not in myUsageMonths:
+        card = alexa.create_card(title="GetInternetUsage activated", subtitle=None,
+                                 content="asked alexa to get internet usage using {}".format(requestMonth))
+        return alexa.create_response("Sorry no usage data exist for the requested month  {}".format(requestMonth), end_session=False, card_obj=card)
 
+    return alexa.create_response("You have used %s%s out of %s%s for the month of %s!" % (myUsageMonths[requestUserMonthByName].homeUsage, 
+                                                                              myUsageMonths[requestUserMonthByName].unitOfMeasure, 
+                                                                              myUsageMonths[requestUserMonthByName].allowableUsage,
+                                                                              myUsageMonths[requestUserMonthByName].unitOfMeasure,
+                                                                              myUsageMonths[requestUserMonthByName].monthLongName ))
+  
+    #for element in jsonObj['usageMonths']:
+    #    print element.startDate
+    #    print element.homeUsage
+    #"startDate":"12/01/2016",
+    #         "endDate":"12/31/2016",
+    #         "homeUsage":268.0,
+    #        "allowableUsage":1024.0,
     # 
     #     return alexa.create_response("Could not find an ingredient!")
-    # card = alexa.create_card(title="GetRecipeIntent activated", subtitle=None,
-    #                          content="asked alexa to find a recipe using {}".format(ingredient))    
-    # return alexa.create_response("Finding a recipe with the ingredient {}".format(ingredient),
-    #                              end_session=False, card_obj=card)
-
-    return alexa.create_response("You have used %s %s for the month of %s!" % (usageAmt, usageUnits, requestMonth ))
-
 
 def getUsage():
     session = requests.Session()
@@ -100,7 +317,7 @@ def getUsage():
 
     data = {
         'user': username,
-        'passwd': password,
+        'passwd': password, 
         'reqId': req_id,
         'deviceAuthn': 'false',
         's': 'oauth',
@@ -123,3 +340,43 @@ def getUsage():
 
     return res.text
 
+
+
+# jsonStr = getUsage()
+# jsonObj = json.loads(jsonStr)
+# usageMonths = jsonObj['usageMonths']
+
+# myUsageMonths = {}
+
+# requestMonth = '2016-09-12'
+# print ('Hello')
+# print (  requestMonth[5] + requestMonth[6] )
+
+# requestUserMonthByName = ""
+
+# if requestMonth == None:
+#     currentDT = datetime.datetime.now()    
+#     requestUserMonthByName = currentDT.strftime("%B") # Get Month by name e.g.    
+# else:    
+#     requestUserMonthByName = calendar.month_name[int(requestMonth[5] + requestMonth[6])]
+
+# jsonStr = getUsage()
+# jsonObj = json.loads(jsonStr)
+# usageMonths   = jsonObj['usageMonths']
+
+# print (len(usageMonths))
+
+# for usageMonth in usageMonths:
+#     monthName = calendar.month_name[int(usageMonth['startDate'][:2])]
+#     myUsageMonths[monthName] = MyUsage( monthName, usageMonth['unitOfMeasure'], usageMonth['homeUsage'], usageMonth['allowableUsage'])
+
+# print (requestUserMonthByName)
+# print (myUsageMonths[requestUserMonthByName].homeUsage)
+# print (myUsageMonths[requestUserMonthByName].unitOfMeasure)
+# print (myUsageMonths[requestUserMonthByName].allowableUsage)
+
+# print ("You have used %s %s out of %s %s for the month of %s!" % (myUsageMonths[requestUserMonthByName].homeUsage, 
+#                                                                 myUsageMonths[requestUserMonthByName].unitOfMeasure, 
+#                                                                 myUsageMonths[requestUserMonthByName].allowableUsage,
+#                                                                 myUsageMonths[requestUserMonthByName].unitOfMeasure,
+#                                                                 myUsageMonths[requestUserMonthByName].monthLongName ))
