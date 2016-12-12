@@ -3,17 +3,23 @@
 ### Installation
 
 ```bash
-pip install requests -t "path to this project"
-```
 
-**Note:** This code uses ask-alexa-pykit release python_lambda_0.5_release 
+git clone git@github.com:kfowlks/aws_alexa_comcast_data_usage_lambda.git
 
-```bash
+cd aws_alexa_comcast_data_usage_lambda
+
+pip install requests -t <path to this project>/aws_alexa_comcast_data_usage_lambda
+
 git clone https://github.com/anjishnu/ask-alexa-pykit.git
 
-git checkout python_lambda_0.5_release 
-```
+cd ask-alexa-pykit
 
+git checkout python_lambda_0.5_release 
+
+cp -R ask <path to this project>/aws_alexa_comcast_data_usage_lambda
+
+cd <path to this project>/aws_alexa_comcast_data_usage_lambda
+```
 You'll need to contruct a zip file that contains all code and external libraries.
 
 ```bash
