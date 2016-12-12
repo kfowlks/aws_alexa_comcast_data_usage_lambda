@@ -1,21 +1,29 @@
 {
-    "session": {
-	"sessionId": "SessionId.d461672c-2997-4d9d-9a8c-a67834acb9aa",
-	"application": {
-	    "applicationId": "amzn1.echo-sdk-ams.app.a306b3a3-3331-43c1-87bd-87d29d16fac8"
-	},
-	"user": {
-	    "userId": "amzn1.account.AGBATYSC32Y2QVDQKOWJUUJNEYFA"
-	},
-	"new": true
+  "session": {
+    "sessionId": "SessionId.9da74599-e9d0-4d7e-ad2f-fc3369e79614",
+    "application": {
+      "applicationId": "amzn1.ask.skill.[unique id]"
     },
-    "request": {
-	"type": "IntentRequest",
-	"requestId": "EdwRequestId.b22db637-b8f9-43c0-ae0c-1a9b35a02610",
-	"timestamp": 1447911387582,
-	"intent": {
-	    "name": "YesIntent",
-	    "slots": {}
-	}
+    "attributes": {},
+    "user": {
+      "userId": "amzn1.ask.account.[unique id]"
+    },
+    "new": true
+  },
+  "request": {
+    "type": "IntentRequest",
+    "requestId": "EdwRequestId.[unique id]",
+    "locale": "en-US",
+    "timestamp": "2016-12-12T01:09:50Z",
+    "intent": {
+      "name": "GetInternetUsage",
+      "slots": {
+        "Date": {
+          "name": "Date",
+          "value": "2016-12-12"
+        }
+      }
     }
+  },
+  "version": "1.0"
 }
