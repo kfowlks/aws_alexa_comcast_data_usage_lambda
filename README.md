@@ -25,7 +25,7 @@ You'll need to set the below Environment variables in your AWS Lambda console
     COMCAST_PASSWORD
 
 You'll need to configure the AWS Alexa skill console and follow the steps to create a skill. You will find the 
-intent scheme and the utterance text under ![Alt text](/test-data "Test Data")
+intent scheme and the utterance text under [Test Data](/test-data)
 
 ###Testing
 
