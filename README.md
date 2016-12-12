@@ -1,7 +1,7 @@
 # An Amazon Alexa skill for getting your comcast internet usage using Python for AWS Lambda 
 
 ### Installation
-pip install requests -t <path to this project>
+pip install requests -t "path to this project"
 
 Note: This code uses ask-alexa-pykit release python_lambda_0.5_release 
 
