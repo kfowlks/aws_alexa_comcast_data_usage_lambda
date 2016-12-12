@@ -1,0 +1,11 @@
+GetInternetUsage what is my internet usage
+GetInternetUsage what is my current internet usage
+GetInternetUsage my current internet usage is
+GetInternetUsage my current internet usage
+GetInternetUsage tell me my current internet usage
+GetInternetUsage internet usage is
+GetInternetUsage check current internet usage
+GetInternetUsage what was my internet usage for the month of {Date}
+GetInternetUsage my internet usage as of {Date}
+GetInternetUsage internet usage as of {Date}
+GetInternetUsage what was my internet usage {Date}

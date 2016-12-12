@@ -1,0 +1,13 @@
+{
+  "intents":[ 
+    {
+      "intent": "GetInternetUsage",
+      "slots": [
+        {
+          "name": "Date",
+          "type": "AMAZON.DATE"
+        }
+      ]
+    }
+    ]
+}
