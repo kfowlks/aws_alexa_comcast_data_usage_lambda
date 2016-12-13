@@ -106,11 +106,18 @@ def get_internet_usage_intent_handler(request):
                                  content="asked alexa to get internet usage using {}".format(requestMonth))
         return alexa.create_response("Sorry no usage data exist for the requested month {}".format(requestMonth), end_session=False, card_obj=card)
     else:
-        return alexa.create_response("You have used %s%s out of %s%s for the month of %s!" % (myUsageMonths[requestUserMonthByName].homeUsage, 
-                                                                                              myUsageMonths[requestUserMonthByName].unitOfMeasure, 
-                                                                                              myUsageMonths[requestUserMonthByName].allowableUsage,
-                                                                                              myUsageMonths[requestUserMonthByName].unitOfMeasure,
-                                                                                              myUsageMonths[requestUserMonthByName].monthLongName ))
+        card = alexa.create_card(title="GetInternetUsage activated", subtitle=None,
+                                    content="You have used %s%s out of %s%s for the month of %s!" % (myUsageMonths[requestUserMonthByName].homeUsage, 
+                                                                                                    myUsageMonths[requestUserMonthByName].unitOfMeasure, 
+                                                                                                    myUsageMonths[requestUserMonthByName].allowableUsage,
+                                                                                                    myUsageMonths[requestUserMonthByName].unitOfMeasure,
+                                                                                                    myUsageMonths[requestUserMonthByName].monthLongName ))
+
+        return alexa.create_response("You have used %s%s out of %s%s for the month of %s!" % (myUsageMonths[requestUserMonthByName].homeUsage,
+                                                                                        myUsageMonths[requestUserMonthByName].unitOfMeasure,
+                                                                                        myUsageMonths[requestUserMonthByName].allowableUsage,
+                                                                                        myUsageMonths[requestUserMonthByName].unitOfMeasure,
+                                                                                        myUsageMonths[requestUserMonthByName].monthLongName ), end_session=False, card_obj=card)
 def getUsage():
     session = requests.Session()
 
