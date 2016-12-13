@@ -100,3 +100,6 @@ If everything worked, you'll see a response like the below.
 
 ### Version
 0.0.1
+
+[![Travis build status](https://travis-ci.org/kfowlks/aws_alexa_comcast_data_usage_lambda.svg?branch=master)](https://travis-ci.org/kfowlks)
+
